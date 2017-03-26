@@ -29,7 +29,7 @@ namespace System.Runtime.Serialization.Generated
         static int[] s_knownContractsLists = new int[] {
               -1, }
         ;
-        // Count = 32
+        // Count = 35
         static int[] s_xmlDictionaryStrings = new int[] {
                 0, // array length: 0
                 1, // array length: 1
@@ -40,7 +40,8 @@ namespace System.Runtime.Serialization.Generated
                 417, // index: 417, string: "response"
                 1, // array length: 1
                 270, // index: 270, string: "http://schemas.datacontract.org/2004/07/ClashGhost.Models"
-                6, // array length: 6
+                7, // array length: 7
+                -1, // string: null
                 -1, // string: null
                 -1, // string: null
                 -1, // string: null
@@ -49,14 +50,16 @@ namespace System.Runtime.Serialization.Generated
                 -1, // string: null
                 1, // array length: 1
                 270, // index: 270, string: "http://schemas.datacontract.org/2004/07/ClashGhost.Models"
-                6, // array length: 6
+                7, // array length: 7
                 426, // index: 426, string: "Email"
                 432, // index: 432, string: "Name"
-                437, // index: 437, string: "Password"
-                446, // index: 446, string: "Sex"
-                450, // index: 450, string: "TimeStamp"
-                460, // index: 460, string: "UID"
-                6, // array length: 6
+                437, // index: 437, string: "Operation"
+                447, // index: 447, string: "Password"
+                456, // index: 456, string: "Sex"
+                460, // index: 460, string: "TimeStamp"
+                470, // index: 470, string: "UID"
+                7, // array length: 7
+                270, // index: 270, string: "http://schemas.datacontract.org/2004/07/ClashGhost.Models"
                 270, // index: 270, string: "http://schemas.datacontract.org/2004/07/ClashGhost.Models"
                 270, // index: 270, string: "http://schemas.datacontract.org/2004/07/ClashGhost.Models"
                 270, // index: 270, string: "http://schemas.datacontract.org/2004/07/ClashGhost.Models"
@@ -620,9 +623,9 @@ namespace System.Runtime.Serialization.Generated
                         UnderlyingType = new global::Internal.Runtime.CompilerServices.FixupRuntimeTypeHandle(global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("ClashGhost.Models.ProfileResponse, ClashGhost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")),
                     },
                     ChildElementNamespacesListIndex = 9,
-                    ContractNamespacesListIndex = 16,
-                    MemberNamesListIndex = 18,
-                    MemberNamespacesListIndex = 25,
+                    ContractNamespacesListIndex = 17,
+                    MemberNamesListIndex = 19,
+                    MemberNamespacesListIndex = 27,
                 }
         };
         static readonly byte[] s_collectionDataContracts_Hashtable = null;
@@ -694,7 +697,7 @@ namespace System.Runtime.Serialization.Generated
             'o','f','i','l','e','R','e','s','p','o','n','s','e','\0','A','r','r','a','y','O','f','a','n','y','T','y','p','e','\0','h',
             't','t','p',':','/','/','s','c','h','e','m','a','s','.','m','i','c','r','o','s','o','f','t','.','c','o','m','/','2','0',
             '0','3','/','1','0','/','S','e','r','i','a','l','i','z','a','t','i','o','n','/','A','r','r','a','y','s','\0','r','e','s',
-            'p','o','n','s','e','\0','E','m','a','i','l','\0','N','a','m','e','\0','P','a','s','s','w','o','r','d','\0','S','e','x','\0',
-            'T','i','m','e','S','t','a','m','p','\0','U','I','D','\0'};
+            'p','o','n','s','e','\0','E','m','a','i','l','\0','N','a','m','e','\0','O','p','e','r','a','t','i','o','n','\0','P','a','s',
+            's','w','o','r','d','\0','S','e','x','\0','T','i','m','e','S','t','a','m','p','\0','U','I','D','\0'};
     }
 }

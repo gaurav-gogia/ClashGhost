@@ -30164,45 +30164,46 @@ namespace Windows.Security.Cryptography
 				}
 			}
 
-			// Signature, Windows.Security.Cryptography.ICryptographicBufferStatics.EncodeToHexString, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Storage_Streams_IBuffer__Windows_Storage_Streams__IBuffer *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.HSTRINGMarshaller] string__System.Runtime.InteropServices.HSTRING, 
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			public static string EncodeToHexString(
 						global::System.__ComObject __this, 
 						global::Windows.Storage.Streams.IBuffer buffer)
 			{
-				// Setup
-				global::Windows.Storage.Streams.IBuffer__Impl.Vtbl** unsafe_buffer = default(global::Windows.Storage.Streams.IBuffer__Impl.Vtbl**);
-				global::System.Runtime.InteropServices.HSTRING unsafe_value__retval = default(global::System.Runtime.InteropServices.HSTRING);
-				string value__retval = default(string);
-				int unsafe___return__;
-				try
-				{
-					// Marshalling
-					unsafe_buffer = (global::Windows.Storage.Streams.IBuffer__Impl.Vtbl**)global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(
-										buffer, 
-										typeof(global::Windows.Storage.Streams.IBuffer).TypeHandle
-									);
-					unsafe_value__retval = default(global::System.Runtime.InteropServices.HSTRING);
-					// Call to native method
-					unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-										__this, 
-										typeof(global::Windows.Security.Cryptography.ICryptographicBufferStatics).TypeHandle, 
-										global::Windows.Security.Cryptography.ICryptographicBufferStatics__Impl.Vtbl.idx_EncodeToHexString, 
-										unsafe_buffer, 
-										&(unsafe_value__retval)
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					value__retval = global::System.Runtime.InteropServices.McgMarshal.HStringToString(unsafe_value__retval);
-					// Return
-					return value__retval;
-				}
-				finally
-				{
-					// Cleanup
-					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_buffer)));
-					global::System.GC.KeepAlive(buffer);
-					global::System.Runtime.InteropServices.McgMarshal.FreeHString(unsafe_value__retval.handle);
-				}
+				string __ret = global::McgInterop.ForwardComSharedStubs.Func_TArg0__string__<global::Windows.Security.Cryptography.ICryptographicBufferStatics, global::Windows.Storage.Streams.IBuffer>(
+									__this, 
+									buffer, 
+									global::Windows.Security.Cryptography.ICryptographicBufferStatics__Impl.Vtbl.idx_EncodeToHexString
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Storage.Streams.IBuffer DecodeFromBase64String(
+						global::System.__ComObject __this, 
+						string value)
+			{
+				global::Windows.Storage.Streams.IBuffer __ret = global::McgInterop.ForwardComSharedStubs.Func_string__TResult__<global::Windows.Security.Cryptography.ICryptographicBufferStatics, global::Windows.Storage.Streams.IBuffer>(
+									__this, 
+									value, 
+									global::Windows.Security.Cryptography.ICryptographicBufferStatics__Impl.Vtbl.idx_DecodeFromBase64String
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static string EncodeToBase64String(
+						global::System.__ComObject __this, 
+						global::Windows.Storage.Streams.IBuffer buffer)
+			{
+				string __ret = global::McgInterop.ForwardComSharedStubs.Func_TArg0__string__<global::Windows.Security.Cryptography.ICryptographicBufferStatics, global::Windows.Storage.Streams.IBuffer>(
+									__this, 
+									buffer, 
+									global::Windows.Security.Cryptography.ICryptographicBufferStatics__Impl.Vtbl.idx_EncodeToBase64String
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
 			}
 
 			// Signature, Windows.Security.Cryptography.ICryptographicBufferStatics.ConvertStringToBinary, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.HSTRINGMarshaller] string__System.Runtime.InteropServices.HSTRING, [fwd] [in] [Mcg.CodeGen.EnumMarshaller]  -> int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Storage_Streams_IBuffer__Windows_Storage_Streams__IBuffer *, 
@@ -30291,6 +30292,28 @@ namespace Windows.Security.Cryptography
 			}
 
 			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			global::Windows.Storage.Streams.IBuffer global::Windows.Security.Cryptography.ICryptographicBufferStatics.DecodeFromBase64String(string value)
+			{
+				global::Windows.Storage.Streams.IBuffer __retVal = global::Windows.Security.Cryptography.ICryptographicBufferStatics__Impl.StubClass.DecodeFromBase64String(
+									this, 
+									value
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			string global::Windows.Security.Cryptography.ICryptographicBufferStatics.EncodeToBase64String(global::Windows.Storage.Streams.IBuffer buffer)
+			{
+				string __retVal = global::Windows.Security.Cryptography.ICryptographicBufferStatics__Impl.StubClass.EncodeToBase64String(
+									this, 
+									buffer
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 			global::Windows.Storage.Streams.IBuffer global::Windows.Security.Cryptography.ICryptographicBufferStatics.ConvertStringToBinary(
 						string value, 
 						global::Windows.Security.Cryptography.BinaryStringEncoding encoding)
@@ -30312,6 +30335,8 @@ namespace Windows.Security.Cryptography
 			internal const int idx_CreateFromByteArray = 9;
 			internal const int idx_CopyToByteArray = 10;
 			internal const int idx_EncodeToHexString = 12;
+			internal const int idx_DecodeFromBase64String = 13;
+			internal const int idx_EncodeToBase64String = 14;
 			internal const int idx_ConvertStringToBinary = 15;
 		}
 	}
@@ -30572,6 +30597,17 @@ namespace Windows.Security.Cryptography.Core
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 				return __ret;
 			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Security.Cryptography.Core.CryptographicHash CreateHash(global::System.__ComObject __this)
+			{
+				global::Windows.Security.Cryptography.Core.CryptographicHash __ret = global::McgInterop.ForwardComSharedStubs.Func_TResult__<global::Windows.Security.Cryptography.Core.IHashAlgorithmProvider, global::Windows.Security.Cryptography.Core.CryptographicHash>(
+									__this, 
+									global::Windows.Security.Cryptography.Core.IHashAlgorithmProvider__Impl.Vtbl.idx_CreateHash
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
 		}
 
 		// DispatchClass for 'Windows.Security.Cryptography.Core.IHashAlgorithmProvider'
@@ -30588,6 +30624,14 @@ namespace Windows.Security.Cryptography.Core
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 				return __retVal;
 			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			global::Windows.Security.Cryptography.Core.CryptographicHash global::Windows.Security.Cryptography.Core.IHashAlgorithmProvider.CreateHash()
+			{
+				global::Windows.Security.Cryptography.Core.CryptographicHash __retVal = global::Windows.Security.Cryptography.Core.IHashAlgorithmProvider__Impl.StubClass.CreateHash(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
 		}
 
 		// v-table for 'Windows.Security.Cryptography.Core.IHashAlgorithmProvider'
@@ -30595,6 +30639,299 @@ namespace Windows.Security.Cryptography.Core
 		public unsafe partial struct Vtbl
 		{
 			internal const int idx_HashData = 8;
+			internal const int idx_CreateHash = 9;
+		}
+	}
+
+	// Windows.Security.Cryptography.Core.IHashComputation
+	public unsafe static class IHashComputation__Impl
+	{
+		// StubClass for 'Windows.Security.Cryptography.Core.IHashComputation'
+		public static partial class StubClass
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void Append(
+						global::System.__ComObject __this, 
+						global::Windows.Storage.Streams.IBuffer data)
+			{
+				global::McgInterop.ForwardComSharedStubs.Proc_TArg0__<global::Windows.Security.Cryptography.Core.IHashComputation, global::Windows.Storage.Streams.IBuffer>(
+									__this, 
+									data, 
+									global::Windows.Security.Cryptography.Core.IHashComputation__Impl.Vtbl.idx_Append
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Storage.Streams.IBuffer GetValueAndReset(global::System.__ComObject __this)
+			{
+				global::Windows.Storage.Streams.IBuffer __ret = global::McgInterop.ForwardComSharedStubs.Func_TResult__<global::Windows.Security.Cryptography.Core.IHashComputation, global::Windows.Storage.Streams.IBuffer>(
+									__this, 
+									global::Windows.Security.Cryptography.Core.IHashComputation__Impl.Vtbl.idx_GetValueAndReset
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+
+		// DispatchClass for 'Windows.Security.Cryptography.Core.IHashComputation'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.IHashComputation))]
+		public abstract partial class DispatchClass : global::System.__ComObject, global::Windows.Security.Cryptography.Core.IHashComputation
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			void global::Windows.Security.Cryptography.Core.IHashComputation.Append(global::Windows.Storage.Streams.IBuffer data)
+			{
+				global::Windows.Security.Cryptography.Core.IHashComputation__Impl.StubClass.Append(
+									this, 
+									data
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			global::Windows.Storage.Streams.IBuffer global::Windows.Security.Cryptography.Core.IHashComputation.GetValueAndReset()
+			{
+				global::Windows.Storage.Streams.IBuffer __retVal = global::Windows.Security.Cryptography.Core.IHashComputation__Impl.StubClass.GetValueAndReset(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+		}
+
+		// v-table for 'Windows.Security.Cryptography.Core.IHashComputation'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.IHashComputation))]
+		public unsafe partial struct Vtbl
+		{
+			internal const int idx_Append = 6;
+			internal const int idx_GetValueAndReset = 7;
+		}
+	}
+
+	// Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics
+	public unsafe static class ISymmetricAlgorithmNamesStatics__Impl
+	{
+		// StubClass for 'Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics'
+		public static partial class StubClass
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static string get_AesEcbPkcs7(global::System.__ComObject __this)
+			{
+				string __ret = global::McgInterop.ForwardComSharedStubs.Func_string__<global::Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics>(
+									__this, 
+									global::Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics__Impl.Vtbl.idx_get_AesEcbPkcs7
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+
+		// DispatchClass for 'Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics))]
+		public abstract partial class DispatchClass : global::System.__ComObject, global::Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.AesEcbPkcs7")]
+			string global::Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics.get_AesEcbPkcs7()
+			{
+				string __retVal = global::Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics__Impl.StubClass.get_AesEcbPkcs7(this);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+		}
+
+		// v-table for 'Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics))]
+		public unsafe partial struct Vtbl
+		{
+			internal const int idx_get_AesEcbPkcs7 = 17;
+		}
+	}
+
+	// Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics
+	public unsafe static class ISymmetricKeyAlgorithmProviderStatics__Impl
+	{
+		// StubClass for 'Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics'
+		public static partial class StubClass
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider OpenAlgorithm(
+						global::System.__ComObject __this, 
+						string algorithm)
+			{
+				global::Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider __ret = global::McgInterop.ForwardComSharedStubs.Func_string__TResult__<global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics, global::Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider>(
+									__this, 
+									algorithm, 
+									global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics__Impl.Vtbl.idx_OpenAlgorithm
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+
+		// DispatchClass for 'Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics))]
+		public abstract partial class DispatchClass : global::System.__ComObject, global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			global::Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics.OpenAlgorithm(string algorithm)
+			{
+				global::Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider __retVal = global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics__Impl.StubClass.OpenAlgorithm(
+									this, 
+									algorithm
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+		}
+
+		// v-table for 'Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics))]
+		public unsafe partial struct Vtbl
+		{
+			internal const int idx_OpenAlgorithm = 6;
+		}
+	}
+
+	// Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider
+	public unsafe static class ISymmetricKeyAlgorithmProvider__Impl
+	{
+		// StubClass for 'Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider'
+		public static partial class StubClass
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Security.Cryptography.Core.CryptographicKey CreateSymmetricKey(
+						global::System.__ComObject __this, 
+						global::Windows.Storage.Streams.IBuffer keyMaterial)
+			{
+				global::Windows.Security.Cryptography.Core.CryptographicKey __ret = global::McgInterop.ForwardComSharedStubs.Func_TArg0__TResult__<global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider, global::Windows.Storage.Streams.IBuffer, global::Windows.Security.Cryptography.Core.CryptographicKey>(
+									__this, 
+									keyMaterial, 
+									global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider__Impl.Vtbl.idx_CreateSymmetricKey
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+
+		// DispatchClass for 'Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider))]
+		public abstract partial class DispatchClass : global::System.__ComObject, global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			global::Windows.Security.Cryptography.Core.CryptographicKey global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider.CreateSymmetricKey(global::Windows.Storage.Streams.IBuffer keyMaterial)
+			{
+				global::Windows.Security.Cryptography.Core.CryptographicKey __retVal = global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider__Impl.StubClass.CreateSymmetricKey(
+									this, 
+									keyMaterial
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+		}
+
+		// v-table for 'Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider))]
+		public unsafe partial struct Vtbl
+		{
+			internal const int idx_CreateSymmetricKey = 8;
+		}
+	}
+
+	// Windows.Security.Cryptography.Core.ICryptographicKey
+	public unsafe static class ICryptographicKey__Impl
+	{
+		// v-table for 'Windows.Security.Cryptography.Core.ICryptographicKey'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.ICryptographicKey))]
+		public unsafe partial struct Vtbl
+		{
+		}
+	}
+
+	// Windows.Security.Cryptography.Core.ICryptographicEngineStatics
+	public unsafe static class ICryptographicEngineStatics__Impl
+	{
+		// StubClass for 'Windows.Security.Cryptography.Core.ICryptographicEngineStatics'
+		public static partial class StubClass
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Storage.Streams.IBuffer Encrypt(
+						global::System.__ComObject __this, 
+						global::Windows.Security.Cryptography.Core.CryptographicKey key, 
+						global::Windows.Storage.Streams.IBuffer data, 
+						global::Windows.Storage.Streams.IBuffer iv)
+			{
+				global::Windows.Storage.Streams.IBuffer __ret = global::McgInterop.ForwardComSharedStubs.Func_TArg0__TArg1__TArg2__TResult__<global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics, global::Windows.Security.Cryptography.Core.CryptographicKey, global::Windows.Storage.Streams.IBuffer, global::Windows.Storage.Streams.IBuffer, global::Windows.Storage.Streams.IBuffer>(
+									__this, 
+									key, 
+									data, 
+									iv, 
+									global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics__Impl.Vtbl.idx_Encrypt
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.Storage.Streams.IBuffer Decrypt(
+						global::System.__ComObject __this, 
+						global::Windows.Security.Cryptography.Core.CryptographicKey key, 
+						global::Windows.Storage.Streams.IBuffer data, 
+						global::Windows.Storage.Streams.IBuffer iv)
+			{
+				global::Windows.Storage.Streams.IBuffer __ret = global::McgInterop.ForwardComSharedStubs.Func_TArg0__TArg1__TArg2__TResult__<global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics, global::Windows.Security.Cryptography.Core.CryptographicKey, global::Windows.Storage.Streams.IBuffer, global::Windows.Storage.Streams.IBuffer, global::Windows.Storage.Streams.IBuffer>(
+									__this, 
+									key, 
+									data, 
+									iv, 
+									global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics__Impl.Vtbl.idx_Decrypt
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+
+		// DispatchClass for 'Windows.Security.Cryptography.Core.ICryptographicEngineStatics'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics))]
+		public abstract partial class DispatchClass : global::System.__ComObject, global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			global::Windows.Storage.Streams.IBuffer global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics.Encrypt(
+						global::Windows.Security.Cryptography.Core.CryptographicKey key, 
+						global::Windows.Storage.Streams.IBuffer data, 
+						global::Windows.Storage.Streams.IBuffer iv)
+			{
+				global::Windows.Storage.Streams.IBuffer __retVal = global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics__Impl.StubClass.Encrypt(
+									this, 
+									key, 
+									data, 
+									iv
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			global::Windows.Storage.Streams.IBuffer global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics.Decrypt(
+						global::Windows.Security.Cryptography.Core.CryptographicKey key, 
+						global::Windows.Storage.Streams.IBuffer data, 
+						global::Windows.Storage.Streams.IBuffer iv)
+			{
+				global::Windows.Storage.Streams.IBuffer __retVal = global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics__Impl.StubClass.Decrypt(
+									this, 
+									key, 
+									data, 
+									iv
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __retVal;
+			}
+		}
+
+		// v-table for 'Windows.Security.Cryptography.Core.ICryptographicEngineStatics'
+		[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics))]
+		public unsafe partial struct Vtbl
+		{
+			internal const int idx_Encrypt = 6;
+			internal const int idx_Decrypt = 7;
 		}
 	}
 }

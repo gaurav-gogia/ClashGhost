@@ -1226,6 +1226,18 @@ namespace McgInterop
 					global::System.IntPtr pfn, 
 					void* pthis, 
 					void* arg0, 
+					void* arg1, 
+					void* arg2, 
+					void* arg3)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* pthis, 
+					void* arg0, 
 					uint arg1, 
 					uint arg2, 
 					void* arg3)

@@ -46,7 +46,7 @@ namespace ClashGhost
                     Frame.Navigate(typeof(Login));
                     break;
                 case true:
-                    Frame.Navigate(typeof(Register));
+                    Frame.Navigate(typeof(Register), true);
                     break;
             }
         }

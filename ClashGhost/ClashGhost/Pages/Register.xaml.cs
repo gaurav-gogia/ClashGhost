@@ -3,6 +3,7 @@ using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -15,11 +16,19 @@ namespace ClashGhost.Pages
     {
         private RegisterData regData;
         private static string sexinfo;
+        public static bool insert_update = true;
         public Register()
         {
             this.InitializeComponent();
             regData = new RegisterData();
             fillSexBox();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            insert_update = (bool)e.Parameter;
         }
 
         private void uidbox_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -40,7 +49,7 @@ namespace ClashGhost.Pages
         private void sexbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             sexinfo = sexbox.SelectedValue as string;
-        }
+        }        
 
         private async void regbox_Click(object sender, RoutedEventArgs e)
         {
@@ -49,9 +58,9 @@ namespace ClashGhost.Pages
             theRing.Visibility = Visibility.Visible;
 
             regData.UID = uidbox.Text;
-            regData.Name = DataSecurity.EncryptThisData(namebox.Text);
-            regData.Email = DataSecurity.EncryptThisData(emailbox.Text);
-            regData.Sex = DataSecurity.EncryptThisData(sexinfo);
+            regData.Name = DataSecurity.EncryptThisData(namebox.Text, Constants.PRIV);
+            regData.Email = DataSecurity.EncryptThisData(emailbox.Text, Constants.PRIV);
+            regData.Sex = DataSecurity.EncryptThisData(sexinfo, Constants.PRIV);
             #region ni dikhana jb
             const string priv = Constants.PRIV;
             const string publ = Constants.PUBL;
@@ -60,7 +69,7 @@ namespace ClashGhost.Pages
 
             try
             {
-                var resultingResult = await CommonCall.RegisterUpdateAsync(regData, true);
+                var resultingResult = await CommonCall.RegisterUpdateAsync(regData, insert_update);
                 Frame.Navigate(typeof(MainPage));
             }
             catch (Exception) { }
@@ -78,6 +87,14 @@ namespace ClashGhost.Pages
             sexbox.Items.Add("Male");
             sexbox.Items.Add("Transgender");
             sexbox.Items.Add("Refuse to Disclose");
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (insert_update == true)
+                statusBlock.Text = "Register Here";
+            else
+                statusBlock.Text = "Update Data";
         }
     }
 

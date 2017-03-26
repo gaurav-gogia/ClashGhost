@@ -51,65 +51,6 @@ using System.Runtime.InteropServices.WindowsRuntime;
 // warning CS0628 new protected member declared in sealed class
 #pragma warning disable 628
 
-namespace Internal.NativeCrypto
-{
-	[global::System.Runtime.InteropServices.McgRedirectedType("Internal.NativeCrypto.Cng+NTSTATUS,System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, Pu" +
-		"blicKeyToken=b03f5f7f11d50a3a")]
-	public enum Cng_NTSTATUS__System_Security_Cryptography_Algorithms : uint
-	{
-		STATUS_SUCCESS = 0x0u,
-		STATUS_INVALID_PARAMETER = 0xC000000Du,
-		STATUS_NO_MEMORY = 0xC0000017u,
-		STATUS_NOT_FOUND = 0xC0000225u,
-	}
-
-	[global::System.Runtime.InteropServices.McgRedirectedType("Internal.NativeCrypto.SafeAlgorithmHandle,System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neut" +
-		"ral, PublicKeyToken=b03f5f7f11d50a3a")]
-	public unsafe class SafeAlgorithmHandle__System_Security_Cryptography_Algorithms : global::System.Runtime.InteropServices.SafeHandle
-	{
-		public SafeAlgorithmHandle__System_Security_Cryptography_Algorithms() : 
-				base(default(global::System.IntPtr), false)
-		{
-		}
-
-		public override bool IsInvalid
-		{
-			get
-			{
-				return false;
-			}
-		}
-
-		protected override bool ReleaseHandle()
-		{
-			return false;
-		}
-	}
-
-	[global::System.Runtime.InteropServices.McgRedirectedType("Internal.NativeCrypto.SafeKeyHandle,System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, P" +
-		"ublicKeyToken=b03f5f7f11d50a3a")]
-	public unsafe class SafeKeyHandle__System_Security_Cryptography_Algorithms : global::System.Runtime.InteropServices.SafeHandle
-	{
-		public SafeKeyHandle__System_Security_Cryptography_Algorithms() : 
-				base(default(global::System.IntPtr), false)
-		{
-		}
-
-		public override bool IsInvalid
-		{
-			get
-			{
-				return false;
-			}
-		}
-
-		protected override bool ReleaseHandle()
-		{
-			return false;
-		}
-	}
-}
-
 namespace System.Runtime.InteropServices
 {
 	[global::System.Runtime.InteropServices.McgRedirectedType("System.Runtime.InteropServices.IMarshal,System.Runtime.WindowsRuntime, Version=4.0.11.0, Culture=neutral, Public" +
@@ -3462,6 +3403,64 @@ namespace Windows.Security.Cryptography
 		}
 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static global::Windows.Storage.Streams.IBuffer DecodeFromBase64String(string value)
+		{
+			global::Windows.Storage.Streams.IBuffer retval;
+			retval = __Factory_Windows_Security_Cryptography__ICryptographicBufferStatics_DecodeFromBase64String(
+								"Windows.Security.Cryptography.CryptographicBuffer", 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static global::Windows.Storage.Streams.IBuffer __Factory_Windows_Security_Cryptography__ICryptographicBufferStatics_DecodeFromBase64String(
+					string typeName, 
+					string value)
+		{
+			global::Windows.Storage.Streams.IBuffer __pRetVal;
+			__pRetVal = global::Windows.Security.Cryptography.ICryptographicBufferStatics__Impl.StubClass.DecodeFromBase64String(
+								global::System.Runtime.InteropServices.McgModuleManager.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.Security.Cryptography.ICryptographicBufferStatics).TypeHandle
+												), 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static string EncodeToBase64String(global::Windows.Storage.Streams.IBuffer buffer)
+		{
+			string retval;
+			retval = __Factory_Windows_Security_Cryptography__ICryptographicBufferStatics_EncodeToBase64String(
+								"Windows.Security.Cryptography.CryptographicBuffer", 
+								buffer
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static string __Factory_Windows_Security_Cryptography__ICryptographicBufferStatics_EncodeToBase64String(
+					string typeName, 
+					global::Windows.Storage.Streams.IBuffer buffer)
+		{
+			string __pRetVal;
+			__pRetVal = global::Windows.Security.Cryptography.ICryptographicBufferStatics__Impl.StubClass.EncodeToBase64String(
+								global::System.Runtime.InteropServices.McgModuleManager.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.Security.Cryptography.ICryptographicBufferStatics).TypeHandle
+												), 
+								buffer
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		public static global::Windows.Storage.Streams.IBuffer ConvertStringToBinary(
 					string value, 
 					global::Windows.Security.Cryptography.BinaryStringEncoding encoding)
@@ -3514,6 +3513,12 @@ namespace Windows.Security.Cryptography
 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		string EncodeToHexString(global::Windows.Storage.Streams.IBuffer buffer);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.Storage.Streams.IBuffer DecodeFromBase64String(string value);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		string EncodeToBase64String(global::Windows.Storage.Streams.IBuffer buffer);
 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		global::Windows.Storage.Streams.IBuffer ConvertStringToBinary(
@@ -3730,6 +3735,14 @@ namespace Windows.Security.Cryptography.Core
 		}
 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public global::Windows.Security.Cryptography.Core.CryptographicHash CreateHash()
+		{
+			global::Windows.Security.Cryptography.Core.CryptographicHash __retVal = global::Windows.Security.Cryptography.Core.IHashAlgorithmProvider__Impl.StubClass.CreateHash(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		public static global::Windows.Security.Cryptography.Core.HashAlgorithmProvider OpenAlgorithm(string algorithm)
 		{
 			global::Windows.Security.Cryptography.Core.HashAlgorithmProvider retval;
@@ -3763,6 +3776,215 @@ namespace Windows.Security.Cryptography.Core
 		}
 	}
 
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.IHashComputation))]
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(0)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class CryptographicHash : global::System.__ComObject, global::Windows.Security.Cryptography.Core.IHashComputation
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public void Append(global::Windows.Storage.Streams.IBuffer data)
+		{
+			global::Windows.Security.Cryptography.Core.IHashComputation__Impl.StubClass.Append(
+								this, 
+								data
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public global::Windows.Storage.Streams.IBuffer GetValueAndReset()
+		{
+			global::Windows.Storage.Streams.IBuffer __retVal = global::Windows.Security.Cryptography.Core.IHashComputation__Impl.StubClass.GetValueAndReset(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		public CryptographicHash(global::System.IntPtr dummy)
+		{
+		}
+	}
+
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class SymmetricAlgorithmNames : global::System.__ComObject
+	{
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "AesEcbPkcs7")]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static string get_AesEcbPkcs7()
+		{
+			string retval;
+			retval = __Factory_Windows_Security_Cryptography_Core__ISymmetricAlgorithmNamesStatics_get_AesEcbPkcs7("Windows.Security.Cryptography.Core.SymmetricAlgorithmNames");
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static string __Factory_Windows_Security_Cryptography_Core__ISymmetricAlgorithmNamesStatics_get_AesEcbPkcs7(string typeName)
+		{
+			string __pRetVal;
+			__pRetVal = global::Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics__Impl.StubClass.get_AesEcbPkcs7(global::System.Runtime.InteropServices.McgModuleManager.GetActivationFactory(
+									typeName, 
+									typeof(global::Windows.Security.Cryptography.Core.ISymmetricAlgorithmNamesStatics).TypeHandle
+								));
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		public SymmetricAlgorithmNames(global::System.IntPtr dummy)
+		{
+		}
+	}
+
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider))]
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class SymmetricKeyAlgorithmProvider : global::System.__ComObject, global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public global::Windows.Security.Cryptography.Core.CryptographicKey CreateSymmetricKey(global::Windows.Storage.Streams.IBuffer keyMaterial)
+		{
+			global::Windows.Security.Cryptography.Core.CryptographicKey __retVal = global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProvider__Impl.StubClass.CreateSymmetricKey(
+								this, 
+								keyMaterial
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static global::Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider OpenAlgorithm(string algorithm)
+		{
+			global::Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider retval;
+			retval = __Factory_Windows_Security_Cryptography_Core__ISymmetricKeyAlgorithmProviderStatics_OpenAlgorithm(
+								"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", 
+								algorithm
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static global::Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider __Factory_Windows_Security_Cryptography_Core__ISymmetricKeyAlgorithmProviderStatics_OpenAlgorithm(
+					string typeName, 
+					string algorithm)
+		{
+			global::Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider __pRetVal;
+			__pRetVal = global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics__Impl.StubClass.OpenAlgorithm(
+								global::System.Runtime.InteropServices.McgModuleManager.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.Security.Cryptography.Core.ISymmetricKeyAlgorithmProviderStatics).TypeHandle
+												), 
+								algorithm
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		public SymmetricKeyAlgorithmProvider(global::System.IntPtr dummy)
+		{
+		}
+	}
+
+	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.Security.Cryptography.Core.ICryptographicKey))]
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(0)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class CryptographicKey : global::System.__ComObject, global::Windows.Security.Cryptography.Core.ICryptographicKey
+	{
+		public CryptographicKey(global::System.IntPtr dummy)
+		{
+		}
+	}
+
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe sealed class CryptographicEngine : global::System.__ComObject
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static global::Windows.Storage.Streams.IBuffer Encrypt(
+					global::Windows.Security.Cryptography.Core.CryptographicKey key, 
+					global::Windows.Storage.Streams.IBuffer data, 
+					global::Windows.Storage.Streams.IBuffer iv)
+		{
+			global::Windows.Storage.Streams.IBuffer retval;
+			retval = __Factory_Windows_Security_Cryptography_Core__ICryptographicEngineStatics_Encrypt(
+								"Windows.Security.Cryptography.Core.CryptographicEngine", 
+								key, 
+								data, 
+								iv
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static global::Windows.Storage.Streams.IBuffer __Factory_Windows_Security_Cryptography_Core__ICryptographicEngineStatics_Encrypt(
+					string typeName, 
+					global::Windows.Security.Cryptography.Core.CryptographicKey key, 
+					global::Windows.Storage.Streams.IBuffer data, 
+					global::Windows.Storage.Streams.IBuffer iv)
+		{
+			global::Windows.Storage.Streams.IBuffer __pRetVal;
+			__pRetVal = global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics__Impl.StubClass.Encrypt(
+								global::System.Runtime.InteropServices.McgModuleManager.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics).TypeHandle
+												), 
+								key, 
+								data, 
+								iv
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		public static global::Windows.Storage.Streams.IBuffer Decrypt(
+					global::Windows.Security.Cryptography.Core.CryptographicKey key, 
+					global::Windows.Storage.Streams.IBuffer data, 
+					global::Windows.Storage.Streams.IBuffer iv)
+		{
+			global::Windows.Storage.Streams.IBuffer retval;
+			retval = __Factory_Windows_Security_Cryptography_Core__ICryptographicEngineStatics_Decrypt(
+								"Windows.Security.Cryptography.Core.CryptographicEngine", 
+								key, 
+								data, 
+								iv
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return retval;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		static global::Windows.Storage.Streams.IBuffer __Factory_Windows_Security_Cryptography_Core__ICryptographicEngineStatics_Decrypt(
+					string typeName, 
+					global::Windows.Security.Cryptography.Core.CryptographicKey key, 
+					global::Windows.Storage.Streams.IBuffer data, 
+					global::Windows.Storage.Streams.IBuffer iv)
+		{
+			global::Windows.Storage.Streams.IBuffer __pRetVal;
+			__pRetVal = global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics__Impl.StubClass.Decrypt(
+								global::System.Runtime.InteropServices.McgModuleManager.GetActivationFactory(
+													typeName, 
+													typeof(global::Windows.Security.Cryptography.Core.ICryptographicEngineStatics).TypeHandle
+												), 
+								key, 
+								data, 
+								iv
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __pRetVal;
+		}
+
+		public CryptographicEngine(global::System.IntPtr dummy)
+		{
+		}
+	}
+
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
 	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
 	public unsafe interface IHashAlgorithmNamesStatics
@@ -3790,6 +4012,68 @@ namespace Windows.Security.Cryptography.Core
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		global::Windows.Storage.Streams.IBuffer HashData(global::Windows.Storage.Streams.IBuffer data);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.Security.Cryptography.Core.CryptographicHash CreateHash();
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface IHashComputation
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		void Append(global::Windows.Storage.Streams.IBuffer data);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.Storage.Streams.IBuffer GetValueAndReset();
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface ISymmetricAlgorithmNamesStatics
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "AesEcbPkcs7")]
+		string get_AesEcbPkcs7();
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface ISymmetricKeyAlgorithmProviderStatics
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider OpenAlgorithm(string algorithm);
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface ISymmetricKeyAlgorithmProvider
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.Security.Cryptography.Core.CryptographicKey CreateSymmetricKey(global::Windows.Storage.Streams.IBuffer keyMaterial);
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface ICryptographicKey
+	{
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface ICryptographicEngineStatics
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.Storage.Streams.IBuffer Encrypt(
+					global::Windows.Security.Cryptography.Core.CryptographicKey key, 
+					global::Windows.Storage.Streams.IBuffer data, 
+					global::Windows.Storage.Streams.IBuffer iv);
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::Windows.Storage.Streams.IBuffer Decrypt(
+					global::Windows.Security.Cryptography.Core.CryptographicKey key, 
+					global::Windows.Storage.Streams.IBuffer data, 
+					global::Windows.Storage.Streams.IBuffer iv);
 	}
 }
 
@@ -15831,14 +16115,4 @@ public unsafe partial struct Interop_mincore_CPINFOEXW__CodePageName_e__FixedBuf
 {
 	[global::System.Runtime.InteropServices.FieldOffset(0)]
 	public byte FixedElementField;
-}
-
-[global::System.Runtime.InteropServices.McgRedirectedType("Interop+BCrypt+NTSTATUS,System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToke" +
-	"n=b03f5f7f11d50a3a")]
-public enum Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms : uint
-{
-	STATUS_SUCCESS = 0x0u,
-	STATUS_INVALID_PARAMETER = 0xC000000Du,
-	STATUS_NO_MEMORY = 0xC0000017u,
-	STATUS_NOT_FOUND = 0xC0000225u,
 }

@@ -38,20 +38,20 @@ namespace ClashGhost.Pages
             try
             {
                 thisData = await ProfileCall.GetUserAsync(data);
-                nameblock.Text = DataSecurity.DecryptThisCipher(thisData.Name);
-                sexblock.Text = DataSecurity.DecryptThisCipher(thisData.Sex);
-                emailblock.Text = DataSecurity.DecryptThisCipher(thisData.Email);
+                nameblock.Text = DataSecurity.DecryptThisCipher(thisData.Name, Constants.PRIV);
+                sexblock.Text = DataSecurity.DecryptThisCipher(thisData.Sex, Constants.PRIV);
+                emailblock.Text = DataSecurity.DecryptThisCipher(thisData.Email, Constants.PRIV);
             }
             catch (Exception)
             {
-                switch (thisData.UID)
+                switch (thisData.Operation)
                 {
-                    case "test":
+                    case "Register":
                         nameblock.Text = "Gaurav Gogia";
                         sexblock.Text = "Male";
                         emailblock.Text = "desmondmiles36@gmail.com";
                         break;
-                    case "nuong":
+                    case "Update":
                         nameblock.Text = "Nuong Xinh";
                         sexblock.Text = "Female";
                         emailblock.Text = "nuong@gmail.com";
@@ -66,6 +66,11 @@ namespace ClashGhost.Pages
                 sexblock.Visibility = Visibility.Visible;
                 emailblock.Visibility = Visibility.Visible;
             }
+        }
+
+        private void updateBut_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Register), false);
         }
     }
 }

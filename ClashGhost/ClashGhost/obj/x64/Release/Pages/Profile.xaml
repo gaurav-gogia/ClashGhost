@@ -20,29 +20,33 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Text="User Profile" Grid.ColumnSpan="2"
+        <TextBlock Text="User Profile" 
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    FontSize="30"/>
 
-        <TextBlock x:ConnectionId='2' x:Name="nameblock" Grid.Row="1" 
+        <Button x:ConnectionId='2' x:Name="updateBut" Content="Update Profile"
+                Grid.Column="1" VerticalAlignment="Center"
+                HorizontalAlignment="Center"                        />
+
+        <TextBlock x:ConnectionId='3' x:Name="nameblock" Grid.Row="1" 
                    Text="Gaurav Gogia" VerticalAlignment="Center"
                    Visibility="Collapsed"
                    TextAlignment="Center" FontSize="30"/>
 
 
-        <TextBlock x:ConnectionId='3' x:Name="sexblock" Grid.Row="1" Grid.Column="1" 
+        <TextBlock x:ConnectionId='4' x:Name="sexblock" Grid.Row="1" Grid.Column="1" 
                    Text="Male" VerticalAlignment="Center"
                    Visibility="Collapsed"
                    TextAlignment="Center" FontSize="30"/>
 
 
-        <TextBlock x:ConnectionId='4' x:Name="emailblock" Grid.Row="2" 
+        <TextBlock x:ConnectionId='5' x:Name="emailblock" Grid.Row="2" 
                    Text="desmondmiles36@gmail.com" VerticalAlignment="Center"
                    Grid.ColumnSpan="2" Visibility="Collapsed"
                    TextAlignment="Center" FontSize="30"/>
 
-        <ProgressRing x:ConnectionId='5' x:Name="profiring" Grid.Row="2"
+        <ProgressRing x:ConnectionId='6' x:Name="profiring" Grid.Row="2"
                       Grid.ColumnSpan="2" VerticalAlignment="Center"/>
 
     </Grid>

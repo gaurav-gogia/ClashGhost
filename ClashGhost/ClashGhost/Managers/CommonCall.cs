@@ -12,7 +12,7 @@ namespace ClashGhost.Managers
     class CommonCall
     {
         private static string URI;
-        internal static async Task<CommonResponse> RegisterUpdateAsync(RegisterData data, bool inup)
+        internal static async Task<CommonResponse> RegisterUpdateAsync(RegisterData data, bool inup = false)
         {
             var http = new HttpClient();
 

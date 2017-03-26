@@ -1,8 +1,9 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="ClashGhost.Pages.Register"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ClashGhost.Pages"
+                        
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -27,36 +28,37 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Text="Register Here" VerticalAlignment="Center"
+        <TextBlock x:ConnectionId='2' x:Name="statusBlock"
+                   Text="Register Here" VerticalAlignment="Center"
                    Grid.ColumnSpan="2" HorizontalAlignment="Center"
                    FontSize="25"/>
 
-        <TextBox x:ConnectionId='1' x:Name="uidbox" Grid.Row="1"
+        <TextBox x:ConnectionId='3' x:Name="uidbox" Grid.Row="1"
                  VerticalAlignment="Center" Text="Username"
                  FontSize="20" Margin="20,0,20,0"
                                                        />
 
-        <TextBox x:ConnectionId='2' x:Name="namebox" Grid.Row="1" Grid.Column="1"
+        <TextBox x:ConnectionId='4' x:Name="namebox" Grid.Row="1" Grid.Column="1"
                  VerticalAlignment="Center" Text="Name"
                  FontSize="20" Margin="20,0,20,0"
                                                         />
 
-        <TextBox x:ConnectionId='3' x:Name="emailbox" Grid.Row="2"
+        <TextBox x:ConnectionId='5' x:Name="emailbox" Grid.Row="2"
                  VerticalAlignment="Center" Text="Email"
                  FontSize="20" Margin="20,0,20,0"
                                                          />
 
-        <PasswordBox x:ConnectionId='4' x:Name="passbox" Grid.Row="2"
+        <PasswordBox x:ConnectionId='6' x:Name="passbox" Grid.Row="2"
                      VerticalAlignment="Center" Grid.Column="1"
                      FontSize="20" Margin="20,0,20,0"/>
 
-        <ComboBox x:ConnectionId='5' x:Name="sexbox" Grid.ColumnSpan="2"
+        <ComboBox x:ConnectionId='7' x:Name="sexbox" Grid.ColumnSpan="2"
                   VerticalAlignment="Center" Grid.Row="3"
                   HorizontalAlignment="Stretch"
                   Margin="80,0,80,0" 
                                                             />
         
-        <Button x:ConnectionId='6' x:Name="regbox" Grid.ColumnSpan="2"
+        <Button x:ConnectionId='8' x:Name="regbox" Grid.ColumnSpan="2"
                 VerticalAlignment="Center"
                 FontSize="20" Content="Send Data" 
                 Background="Transparent"
@@ -64,7 +66,7 @@
                 Grid.Row="4" Margin="80,0,80,0"
                                     />
 
-        <ProgressRing x:ConnectionId='7' x:Name="theRing" Grid.Row="4"
+        <ProgressRing x:ConnectionId='9' x:Name="theRing" Grid.Row="4"
                       VerticalAlignment="Center"
                       Margin="0,0,0,0" Grid.ColumnSpan="2"/>
     </Grid>

@@ -1,67 +1,80 @@
 ﻿using System;
 using System.Text;
-using System.Security.Cryptography;
-using System.IO;
+using Windows.Storage.Streams;
+using Windows.Security.Cryptography.Core;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Security.Cryptography;
 using System.Diagnostics;
 
 namespace ClashGhost
 {
     class DataSecurity
     {
-        internal static string EncryptThisData(string text)
+        internal static string EncryptThisData(string input, string pass)
         {
-            string result = null;
+            SymmetricKeyAlgorithmProvider SAP = SymmetricKeyAlgorithmProvider.OpenAlgorithm(SymmetricAlgorithmNames.AesEcbPkcs7);
+            CryptographicKey AES;
+            HashAlgorithmProvider HAP = HashAlgorithmProvider.OpenAlgorithm(HashAlgorithmNames.Md5);
+            CryptographicHash Hash_AES = HAP.CreateHash();
+
+            string encrypted = "";
             try
             {
-                if (!String.IsNullOrEmpty(text))
-                {
-                    byte[] plaintextBytes = Encoding.Unicode.GetBytes(text);
+                byte[] hash = new byte[32];
+                Hash_AES.Append(CryptographicBuffer.CreateFromByteArray(Encoding.UTF8.GetBytes(pass)));
+                byte[] temp;
+                CryptographicBuffer.CopyToByteArray(Hash_AES.GetValueAndReset(), out temp);
 
-                    SymmetricAlgorithm symmetricAlgorithm = Aes.Create();
-                    symmetricAlgorithm.Key = new byte[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
-                    using (MemoryStream memoryStream = new MemoryStream())
-                    {
-                        using (CryptoStream cryptoStream = new CryptoStream(memoryStream, symmetricAlgorithm.CreateEncryptor(), CryptoStreamMode.Write))
-                        {
-                            cryptoStream.Write(plaintextBytes, 0, plaintextBytes.Length);
-                        }
+                Array.Copy(temp, 0, hash, 0, 16);
+                Array.Copy(temp, 0, hash, 15, 16);
 
-                        result = Encoding.Unicode.GetString(memoryStream.ToArray());
-                    }
-                }
-                
+                AES = SAP.CreateSymmetricKey(CryptographicBuffer.CreateFromByteArray(hash));
+
+                IBuffer Buffer = CryptographicBuffer.CreateFromByteArray(Encoding.UTF8.GetBytes(input));
+                encrypted = CryptographicBuffer.EncodeToBase64String(CryptographicEngine.Encrypt(AES, Buffer, null));
+
+                return encrypted;
             }
-            catch(Exception e) { Debug.WriteLine(e); }
-
-            return result;
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return null;
+            }
         }
 
-        internal static string DecryptThisCipher(string text)
-        {
-            string result = null;
 
+        internal static string DecryptThisCipher(string input, string pass)
+        {
+            SymmetricKeyAlgorithmProvider SAP = SymmetricKeyAlgorithmProvider.OpenAlgorithm(SymmetricAlgorithmNames.AesEcbPkcs7);
+            CryptographicKey AES;
+            HashAlgorithmProvider HAP = HashAlgorithmProvider.OpenAlgorithm(HashAlgorithmNames.Md5);
+            CryptographicHash Hash_AES = HAP.CreateHash();
+
+            string decrypted = "";
             try
             {
-                if (!String.IsNullOrEmpty(text))
-                {
-                    byte[] encryptedBytes = Encoding.Unicode.GetBytes(text);
+                byte[] hash = new byte[32];
+                Hash_AES.Append(CryptographicBuffer.CreateFromByteArray(Encoding.UTF8.GetBytes(pass)));
+                byte[] temp;
+                CryptographicBuffer.CopyToByteArray(Hash_AES.GetValueAndReset(), out temp);
 
-                    SymmetricAlgorithm symmetricAlgorithm = Aes.Create();
-                    symmetricAlgorithm.Key = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
-                    using (MemoryStream memoryStream = new MemoryStream(encryptedBytes))
-                    {
-                        using (CryptoStream cryptoStream = new CryptoStream(memoryStream, symmetricAlgorithm.CreateDecryptor(), CryptoStreamMode.Read))
-                        {
-                            byte[] decryptedBytes = new byte[encryptedBytes.Length];
-                            cryptoStream.Read(decryptedBytes, 0, decryptedBytes.Length);
-                            result = Encoding.Unicode.GetString(decryptedBytes);
-                        }
-                    }
-                }                
+                Array.Copy(temp, 0, hash, 0, 16);
+                Array.Copy(temp, 0, hash, 15, 16);
+
+                AES = SAP.CreateSymmetricKey(CryptographicBuffer.CreateFromByteArray(hash));
+
+                IBuffer Buffer = CryptographicBuffer.DecodeFromBase64String(input);
+                byte[] Decrypted;
+                CryptographicBuffer.CopyToByteArray(CryptographicEngine.Decrypt(AES, Buffer, null), out Decrypted);
+                decrypted = Encoding.UTF8.GetString(Decrypted, 0, Decrypted.Length);
+
+                return decrypted;
             }
-            catch(Exception e) { Debug.WriteLine(e); }
-
-            return result;
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return null;
+            }
         }
     }
 }

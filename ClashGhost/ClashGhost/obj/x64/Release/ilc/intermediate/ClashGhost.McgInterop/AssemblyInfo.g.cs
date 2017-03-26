@@ -10,7 +10,6 @@ using System.Runtime.InteropServices.WindowsRuntime;
 [assembly: global::System.Runtime.InteropServices.McgGeneratedAssembly]
 [assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.Runtime.WindowsRuntime")]
 [assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.Text.Encoding.CodePages")]
-[assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.Security.Cryptography.Algorithms")]
 
 
 // -----------------------------------------------------------------------------------------------------------

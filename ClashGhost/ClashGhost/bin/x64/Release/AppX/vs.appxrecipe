@@ -28,7 +28,7 @@
     <AppXManifest Include="C:\Users\Desmond\Documents\Visual Studio 2017\Projects\UWP Native\ClashGhost\ClashGhost\bin\x64\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-25T22:29:03.943</Modified>
+      <Modified>2017-03-26T07:28:36.050</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -76,15 +76,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Desmond\Documents\Visual Studio 2017\Projects\UWP Native\ClashGhost\ClashGhost\bin\x64\Release\ilc\ClashGhost.dll">
       <PackagePath>ClashGhost.dll</PackagePath>
-      <Modified>2017-03-25T22:29:03.539</Modified>
+      <Modified>2017-03-26T07:28:35.655</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Desmond\Documents\Visual Studio 2017\Projects\UWP Native\ClashGhost\ClashGhost\bin\x64\Release\ilc\ClashGhost.exe">
       <PackagePath>ClashGhost.exe</PackagePath>
-      <Modified>2017-03-25T22:29:03.910</Modified>
+      <Modified>2017-03-26T07:28:36.018</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Desmond\Documents\Visual Studio 2017\Projects\UWP Native\ClashGhost\ClashGhost\bin\x64\Release\ilc\ClashGhost.pdb">
       <PackagePath>ClashGhost.pdb</PackagePath>
-      <Modified>2017-03-25T22:29:03.899</Modified>
+      <Modified>2017-03-26T07:28:36.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Desmond\Documents\Visual Studio 2017\Projects\UWP Native\ClashGhost\ClashGhost\bin\x64\Release\ilc\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -93,7 +93,7 @@
     <AppxPackagedFile Include="C:\Users\Desmond\Documents\Visual Studio 2017\Projects\UWP Native\ClashGhost\ClashGhost\bin\x64\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-25T22:28:24.046</Modified>
+      <Modified>2017-03-26T07:27:36.044</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

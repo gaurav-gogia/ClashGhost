@@ -8,5 +8,6 @@
         public string Email { get; set; }
         public string Sex { get; set; }
         public string TimeStamp { get; set; }
+        public string Operation { get; set; }
     }
 }
