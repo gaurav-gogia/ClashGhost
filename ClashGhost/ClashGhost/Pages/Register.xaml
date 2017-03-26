@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="ClashGhost.Pages.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClashGhost.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition FromHorizontalOffset="-480" />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Register Here" VerticalAlignment="Center"
+                   Grid.ColumnSpan="2" HorizontalAlignment="Center"
+                   FontSize="25"/>
+
+        <TextBox x:Name="uidbox" Grid.Row="1"
+                 VerticalAlignment="Center" Text="Username"
+                 FontSize="20" Margin="20,0,20,0"
+                 PointerEntered="uidbox_PointerEntered"/>
+
+        <TextBox x:Name="namebox" Grid.Row="1" Grid.Column="1"
+                 VerticalAlignment="Center" Text="Name"
+                 FontSize="20" Margin="20,0,20,0"
+                 PointerEntered="namebox_PointerEntered"/>
+
+        <TextBox x:Name="emailbox" Grid.Row="2"
+                 VerticalAlignment="Center" Text="Email"
+                 FontSize="20" Margin="20,0,20,0"
+                 PointerEntered="emailbox_PointerEntered"/>
+
+        <PasswordBox x:Name="passbox" Grid.Row="2"
+                     VerticalAlignment="Center" Grid.Column="1"
+                     FontSize="20" Margin="20,0,20,0"/>
+
+        <ComboBox x:Name="sexbox" Grid.ColumnSpan="2"
+                  VerticalAlignment="Center" Grid.Row="3"
+                  HorizontalAlignment="Stretch"
+                  Margin="80,0,80,0" 
+                  SelectionChanged="sexbox_SelectionChanged"/>
+        
+        <Button x:Name="regbox" Grid.ColumnSpan="2"
+                VerticalAlignment="Center"
+                FontSize="20" Content="Send Data" 
+                Background="Transparent"
+                HorizontalAlignment="Stretch"
+                Grid.Row="4" Margin="80,0,80,0"
+                Click="regbox_Click"/>
+
+        <ProgressRing x:Name="theRing" Grid.Row="4"
+                      VerticalAlignment="Center"
+                      Margin="0,0,0,0" Grid.ColumnSpan="2"/>
+    </Grid>
+</Page>

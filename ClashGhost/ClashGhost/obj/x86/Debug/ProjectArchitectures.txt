@@ -1,0 +1,1 @@
+C:\Users\Desmond\Documents\Visual Studio 2017\Projects\UWP Native\ClashGhost\ClashGhost\ClashGhost.csproj;x86

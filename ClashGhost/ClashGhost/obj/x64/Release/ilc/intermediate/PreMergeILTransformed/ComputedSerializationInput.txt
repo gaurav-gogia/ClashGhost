@@ -1,0 +1,2 @@
+"/t:ClashGhost.Models.CommonResponse,ClashGhost,json"
+"/t:ClashGhost.Models.ProfileResponse,ClashGhost,json"
